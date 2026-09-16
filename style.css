@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf4fb;
+    color: #222;
+}
+
+/* Encabezado */
+
+header {
+    background-color: #123b5d;
+    color: white;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    font-size: 25px;
+    color: #35baf6;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #35baf6;
+}
+
+
+/* Inicio */
+
+.inicio {
+    background-color: #d9efff;
+    padding: 60px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.texto-inicio {
+    width: 50%;
+}
+
+.subtitulo {
+    color: #168dcc;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.texto-inicio h2 {
+    font-size: 48px;
+    color: #123b5d;
+    margin-bottom: 20px;
+}
+
+.texto-inicio p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+
+    background-color: #168dcc;
+    color: white;
+    text-decoration: none;
+
+    border-radius: 5px;
+}
+
+.boton:hover {
+    background-color: #123b5d;
+}
+
+
+/* Imagen */
+
+.imagen-inicio {
+    width: 45%;
+}
+
+.imagen-inicio img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* Componentes */
+
+.componentes {
+    padding: 50px 8%;
+    background-color: white;
+}
+
+.componentes h2,
+.placas h2 {
+    color: #123b5d;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.componentes-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.componente {
+    background-color: #eaf4fb;
+    padding: 25px;
+    border: 1px solid #c5dce9;
+    border-radius: 8px;
+}
+
+.componente:hover {
+    border-color: #168dcc;
+}
+
+.icono {
+    font-size: 28px;
+    color: #168dcc;
+    margin-bottom: 10px;
+}
+
+.componente h3 {
+    color: #123b5d;
+    margin-bottom: 8px;
+}
+
+.componente p {
+    color: #555;
+    line-height: 1.4;
+}
+
+
+/* Placas Madre */
+
+.placas {
+    padding: 50px 8%;
+    background-color: #eaf4fb;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #168dcc;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+.tarjeta:hover {
+    box-shadow: 0 4px 10px #bbb;
+}
+
+.numero {
+    color: #168dcc;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tarjeta h3 {
+    color: #123b5d;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.tarjeta strong {
+    color: #123b5d;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #123b5d;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer p {
+    margin-top: 8px;
+    color: #c8dce9;
+}
+
+
+/* Para celulares */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto-inicio {
+        width: 100%;
+    }
+
+    .imagen-inicio {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .componentes-contenedor,
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+    .tarjeta img {
+    width: 120px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+}
